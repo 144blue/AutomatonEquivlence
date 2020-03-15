@@ -65,7 +65,7 @@ namespace equivalencia_de_automatas
                 {
                     this.tabControl1.Visible = true;                   
                     W = entryNumberBox.Text.Split(',');
-                    States = entriesTextyBox.Text.Split(',');-                    
+                    States = entriesTextyBox.Text.Split(',');                 
 
                     if (this.radioButtonMealy.Checked==true)
                     {
@@ -127,6 +127,6 @@ namespace equivalencia_de_automatas
           
         }
 
-
+        
     }
 }

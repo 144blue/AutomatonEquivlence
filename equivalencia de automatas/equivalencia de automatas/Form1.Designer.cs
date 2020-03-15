@@ -427,9 +427,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(32, 168);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 13);
+            this.label13.Size = new System.Drawing.Size(104, 13);
             this.label13.TabIndex = 23;
-            this.label13.Text = "Conjunto de entradas";
+            this.label13.Text = "Conjunto de estados";
             // 
             // Form1
             // 
