@@ -1,0 +1,9 @@
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe.config
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.pdb
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.csprojAssemblyReference.cache
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia_de_automatas.Form1.resources
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia_de_automatas.Properties.Resources.resources
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.csproj.GenerateResource.cache
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.exe
+C:\Users\janus\source\repos\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.pdb
