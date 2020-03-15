@@ -16,6 +16,7 @@ namespace equivalencia_de_automatas
 
         public String[] W;
         public String[] States;
+        public Maquina a;
 
         public Form1()
         {
@@ -70,22 +71,32 @@ namespace equivalencia_de_automatas
                     if (this.radioButtonMealy.Checked==true)
                     {
                         this.tabControl1.TabPages.Remove(tabPage1);
-                        this.dataGridViewMealy.Columns.Add("States", "States");
+                        this.dataGridViewMealy.Columns.Add("States", "States/Entries");
                         for (int i = 0; i < W.Length; i++)
                         {                           
-                            this.dataGridViewMealy.Columns.Add(W[i], W[i]);                            
+                            this.dataGridViewMealy.Columns.Add(W[i], W[i]);   
+                            
                         }
-
+                        for (int i = 0; i <States.Length; i++)
+                        {
+                            this.dataGridViewMealy.Rows.Add(States[i]);
+                        }
+                        this.radioButtonMoore.Enabled = false;
                     }
                     else if(this.radioButtonMoore.Checked==true)
                     {
                         this.tabControl1.TabPages.Remove(tabPage2);
-                        this.dataGridViewMealy.Columns.Add("States", "States");
+                        this.dataGridViewMoore.Columns.Add("States", "States/Entries");
                         for (int i = 0; i < W.Length; i++)
                         {
                             this.dataGridViewMoore.Columns.Add(W[i], W[i]);
                         }
+                        for (int i = 0; i < States.Length; i++)
+                        {
+                            this.dataGridViewMoore.Rows.Add(States[i]);
+                        }
                         this.dataGridViewMealy.Columns.Add("Outputs", "Outputs");
+                        this.radioButtonMealy.Enabled = false;
                     }
                 }
                 catch (Exception)
@@ -105,28 +116,13 @@ namespace equivalencia_de_automatas
            
         }
 
-    
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
 
-            if (dataGridViewMoore.Columns.Contains(textBoxEntradaMoore.Text))
-            {
 
-                foreach (DataGridViewColumn column  in dataGridViewMoore.Columns)
-                {
 
-                    if (true)
-                    {
-                        
-                    }
 
-                }
-            }
 
-          
         }
-
-        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace equivalencia_de_automatas
 {
-    class Maquina
+    public class Maquina
     {
 
         public const int Mealy = 1;

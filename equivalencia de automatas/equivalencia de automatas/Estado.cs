@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace equivalencia_de_automatas
 {
-    class Estado
+    public class Estado
     {
 
 
