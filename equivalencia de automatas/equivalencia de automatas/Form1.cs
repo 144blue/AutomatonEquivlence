@@ -60,32 +60,40 @@ namespace equivalencia_de_automatas
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
-            if (entryNumberBox.Text.Length!=0)
+
+
+            correccionFast();
+
+        }
+
+
+        public void correccionFast()
+        {
+            if (entryNumberBox.Text.Length != 0)
             {
-                
+
                 try
                 {
-                    this.tabControl1.Visible = true;                   
+                    this.tabControl1.Visible = true;
                     W = entryNumberBox.Text.Split(',');
-                    States = entriesTextyBox.Text.Split(',');                 
+                    States = entriesTextyBox.Text.Split(',');
 
-                    if (this.radioButtonMealy.Checked==true)
+                    if (this.radioButtonMealy.Checked == true)
                     {
                         this.tabControl1.TabPages.Remove(tabPage1);
                         this.dataGridViewMealy.Columns.Add("States", "States/Entries");
                         for (int i = 0; i < W.Length; i++)
-                        {                           
-                            this.dataGridViewMealy.Columns.Add(W[i], W[i]);   
-                            
+                        {
+                            this.dataGridViewMealy.Columns.Add(W[i], W[i]);
+
                         }
-                        for (int i = 0; i <States.Length; i++)
+                        for (int i = 0; i < States.Length; i++)
                         {
                             this.dataGridViewMealy.Rows.Add(States[i]);
                         }
                         this.radioButtonMoore.Enabled = false;
                     }
-                    else if(this.radioButtonMoore.Checked==true)
+                    else if (this.radioButtonMoore.Checked == true)
                     {
                         this.tabControl1.TabPages.Remove(tabPage2);
                         this.dataGridViewMoore.Columns.Add("States", "States/Entries");
@@ -105,11 +113,11 @@ namespace equivalencia_de_automatas
                 {
                     throw;
                 }
-                
-                
-                
+
+                entriesTextyBox.Text = "";
+                entryNumberBox.Text = "";
+
             }
-                
 
         }
 
@@ -121,6 +129,7 @@ namespace equivalencia_de_automatas
         private void button5_Click(object sender, EventArgs e)
         {
             //mealy maquina completa
+            
 
             if (machineCount == 0)
             {
@@ -195,11 +204,18 @@ namespace equivalencia_de_automatas
 
                 }
 
+
+
+                dataGridViewMealy.Columns.Clear();
+
+                correccionFast();
+
                 machineCount=1;
 
             }
             else if (machineCount == 1)
             {
+                
 
                 Estado[] estados = new Estado[States.Length];
                 Estado Estadotemporal;
