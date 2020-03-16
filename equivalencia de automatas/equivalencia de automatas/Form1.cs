@@ -17,7 +17,7 @@ namespace equivalencia_de_automatas
         public String[] W;
         public String[] States;
         public Maquina a;
-        
+        public Maquina b;
         public int machineCount;
 
         public Form1()
@@ -142,42 +142,57 @@ namespace equivalencia_de_automatas
                     string[] temnporal = new string[2];
                     String temp;
 
-                    try
-                    {
-                        for (int j = 0; j < W.Length; j++)
+                    
+                        for (int j = 0; j < W.Length+1; j++)
                         {
+                            Console.WriteLine(i);
                             
-                             temp=Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j].Value);
-                             temnporal = temp.Split(',');
-                             salidasCero[j] = int.Parse(temnporal[1]);
-                             estadosSalida[j] = temnporal[0];
-                             
+                        try
+                        {
+                            temp =Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j+1].Value);
+                            
+                            temnporal = temp.Split(',');
+                            if (temnporal.Length > 0)
+                            {
+                                salidasCero[j] = int.Parse(temnporal[1]);
+                                estadosSalida[j] = temnporal[0];
+                            }
+                        }
+                        catch (Exception)
+                        {
 
                             
-                            //importante el indice
+                        }
+                            
+                            
+                            
+                             
+                                                       
+                            
                         }
 
                         Estadotemporal.Salidas = salidasCero;
                         Estadotemporal.Estados = estadosSalida;
 
                         estados[i] = Estadotemporal;
-                    }
-                    catch (Exception)
-                    {
+                    //}
+                   // catch (Exception)
+                   // {
 
-                        throw;
-                    }
+                    //    throw;
+                   // }
 
 
                     machineCount++;
                     
                 }
                 a = new Maquina(estados,1);
+                Console.WriteLine(a.ToString());
                 for (int i = 0; i < States.Length; i++)
                 {
                     for (int j = 0; j < W.Length; j++)
                     {
-                        dataGridViewMealy.Rows[i].Cells[j].Value = "";
+                        dataGridViewMealy.Rows[i].Cells[j+1].Value = "";
                     }
 
                 }
@@ -202,51 +217,58 @@ namespace equivalencia_de_automatas
                     string[] temnporal = new string[2];
                     String temp;
 
-                    try
+
+                    for (int j = 0; j < W.Length + 1; j++)
                     {
-                        for (int j = 0; j < W.Length; j++)
+                        Console.WriteLine(i);
+
+                        try
+                        {
+                            temp = Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j + 1].Value);
+
+                            temnporal = temp.Split(',');
+                            if (temnporal.Length > 0)
+                            {
+                                salidasCero[j] = int.Parse(temnporal[1]);
+                                estadosSalida[j] = temnporal[0];
+                            }
+                        }
+                        catch (Exception)
                         {
 
-                            temp = Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j].Value);
-                            temnporal = temp.Split(',');
-                            salidasCero[j] = int.Parse(temnporal[1]);
-                            estadosSalida[j] = temnporal[0];
 
-
-
-                            //importante el indice
                         }
 
-                        Estadotemporal.Salidas = salidasCero;
-                        Estadotemporal.Estados = estadosSalida;
 
-                        estados[i] = Estadotemporal;
                     }
-                    catch (Exception)
-                    {
 
-                        throw;
-                    }
+                    Estadotemporal.Salidas = salidasCero;
+                    Estadotemporal.Estados = estadosSalida;
+
+                    estados[i] = Estadotemporal;
+                    //}
+                    // catch (Exception)
+                    // {
+
+                    //    throw;
+                    // }
 
 
                     machineCount++;
 
                 }
-                a = new Maquina(estados, 1);
+                b = new Maquina(estados, 1);
+                Console.WriteLine(a.ToString());
                 for (int i = 0; i < States.Length; i++)
                 {
                     for (int j = 0; j < W.Length; j++)
                     {
-                        dataGridViewMealy.Rows[i].Cells[j].Value = "";
+                        dataGridViewMealy.Rows[i].Cells[j + 1].Value = "";
                     }
 
                 }
 
-
-
-                this.buttonmealycompleta.Enabled = false;
-
-
+                buttonmealycompleta.Enabled = false;
             }
 
 
