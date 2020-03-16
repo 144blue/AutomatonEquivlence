@@ -17,6 +17,8 @@ namespace equivalencia_de_automatas
         public String[] W;
         public String[] States;
         public Maquina a;
+        
+        public int machineCount;
 
         public Form1()
         {
@@ -29,8 +31,8 @@ namespace equivalencia_de_automatas
 
         public void initializeVars() {
 
-           
 
+            machineCount = 0;
         }
 
 
@@ -113,16 +115,84 @@ namespace equivalencia_de_automatas
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+           //mealy probar equivalencia
+         
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //mealy maquina completa
+
+            if (machineCount == 0)
+            {
+                Estado[] estados = new Estado[States.Length];
+
+                for (int i = 0; i < States.Length; i++)
+                {
+                    estados[i] = new Estado(States[i]);
+
+                    
 
 
 
+                    int[] salidasCero= new int[States.Length];
+                    String[] estadosSalida = new string[States.Length];
+                    string[] temnporal = new string[2];
+                    String temp;
+
+                    try
+                    {
+                        for (int j = 0; j < W.Length; j++)
+                        {
+                            
+                             temp=Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j].Value);
+                             temnporal = temp.Split(',');
+                             salidasCero[j] = int.Parse(temnporal[1]);
+                             estadosSalida[j] = temnporal[0];
+                             
+
+                            
+                            //importante el indice
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
 
 
+
+                }
+
+                a = new Maquina();
+
+            }else if (machineCount == 1)
+            {
+
+            }
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //moore maquina completa
+
+            if (machineCount == 0)
+            {
+
+            }
+            else if (machineCount == 1)
+            {
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //moore probar equivalencia
         }
     }
 }

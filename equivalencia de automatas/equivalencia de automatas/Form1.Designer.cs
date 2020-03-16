@@ -36,7 +36,6 @@
             this.dataGridViewMoore = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridViewMealy = new System.Windows.Forms.DataGridView();
             this.entryNumberBox = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.entriesTextyBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMoore)).BeginInit();
@@ -90,6 +90,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Maquina completa";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -99,6 +100,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Probar equivalencia";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewMoore
             // 
@@ -128,16 +130,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mealy";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(398, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Maquina completa";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -248,6 +240,16 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "Conjunto de estados";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(398, 16);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(122, 23);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Maquina completa";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,7 +293,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridViewMoore;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridViewMealy;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -302,6 +303,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox entriesTextyBox;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button5;
     }
 }
 
