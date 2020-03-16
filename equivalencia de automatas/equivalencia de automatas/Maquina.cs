@@ -115,5 +115,33 @@ namespace equivalencia_de_automatas
             }
         }
 
+        public void SumaMaquinas(Maquina A, Maquina B)
+        {
+            IEnumerable<Estado> Todos = A.Lista.Union(B.Lista);
+
+            Estado[] sumaEstados = new Estado[Todos.Count()];
+            for(int i=0; i < sumaEstados.Count(); i++)
+            {
+                sumaEstados[i] = Todos.ElementAt(i);
+            }
+            int SumaType = A.type;
+
+            Maquina suma = new Maquina(null, A.type);
+
+
+        }
+        public String ResultadoEquivalencia(Maquina A, Maquina B)
+        {
+            String resultado = "";
+            bool result = false;
+            var estadosA = A.Lista;
+            var estadosB = B.Lista;
+
+            var Q0 = Lista.First();
+
+
+            return resultado;
+        }
+
     }
 }
