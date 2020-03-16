@@ -279,6 +279,8 @@ namespace equivalencia_de_automatas
             Maquina suma = a.SumaMaquinas(a, b);
 
             //Resultado final de si las maquinas a y b son equivalentes
+            var machine= suma.ParticionP0();
+            suma.AsignarParticion(machine);
             String resultado = suma.ResultadoEquivalencia(a, b);
 
 
