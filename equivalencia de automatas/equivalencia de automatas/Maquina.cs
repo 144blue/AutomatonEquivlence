@@ -135,10 +135,7 @@ namespace equivalencia_de_automatas
             }
 
 
-            for (int i=0; i < sumaEstados.Count(); i++)
-            {
-                sumaEstados[i] = Todos.ElementAt(i);
-            }
+            
             int SumaType = A.type;
 
             Maquina suma = new Maquina(sumaEstados, A.type);
