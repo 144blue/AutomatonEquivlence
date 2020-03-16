@@ -48,7 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.entriesTextyBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonmealycompleta = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMoore)).BeginInit();
@@ -120,7 +120,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.buttonmealycompleta);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.dataGridViewMealy);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -240,15 +240,15 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "Conjunto de estados";
             // 
-            // button5
+            // buttonmealycompleta
             // 
-            this.button5.Location = new System.Drawing.Point(398, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Maquina completa";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonmealycompleta.Location = new System.Drawing.Point(398, 16);
+            this.buttonmealycompleta.Name = "buttonmealycompleta";
+            this.buttonmealycompleta.Size = new System.Drawing.Size(122, 23);
+            this.buttonmealycompleta.TabIndex = 29;
+            this.buttonmealycompleta.Text = "Maquina completa";
+            this.buttonmealycompleta.UseVisualStyleBackColor = true;
+            this.buttonmealycompleta.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -303,7 +303,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox entriesTextyBox;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonmealycompleta;
     }
 }
 

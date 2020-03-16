@@ -127,13 +127,14 @@ namespace equivalencia_de_automatas
             if (machineCount == 0)
             {
                 Estado[] estados = new Estado[States.Length];
+                Estado Estadotemporal;
 
                 for (int i = 0; i < States.Length; i++)
                 {
-                    estados[i] = new Estado(States[i]);
 
-                    
 
+
+                    Estadotemporal= new Estado(States[i]);
 
 
                     int[] salidasCero= new int[States.Length];
@@ -155,6 +156,11 @@ namespace equivalencia_de_automatas
                             
                             //importante el indice
                         }
+
+                        Estadotemporal.Salidas = salidasCero;
+                        Estadotemporal.Estados = estadosSalida;
+
+                        estados[i] = Estadotemporal;
                     }
                     catch (Exception)
                     {
@@ -163,13 +169,83 @@ namespace equivalencia_de_automatas
                     }
 
 
+                    machineCount++;
+                    
+                }
+                a = new Maquina(estados,1);
+                for (int i = 0; i < States.Length; i++)
+                {
+                    for (int j = 0; j < W.Length; j++)
+                    {
+                        dataGridViewMealy.Rows[i].Cells[j].Value = "";
+                    }
 
                 }
 
-                a = new Maquina();
-
-            }else if (machineCount == 1)
+            }
+            else if (machineCount == 1)
             {
+
+                Estado[] estados = new Estado[States.Length];
+                Estado Estadotemporal;
+
+                for (int i = 0; i < States.Length; i++)
+                {
+
+
+
+                    Estadotemporal = new Estado(States[i]);
+
+
+                    int[] salidasCero = new int[States.Length];
+                    String[] estadosSalida = new string[States.Length];
+                    string[] temnporal = new string[2];
+                    String temp;
+
+                    try
+                    {
+                        for (int j = 0; j < W.Length; j++)
+                        {
+
+                            temp = Convert.ToString(this.dataGridViewMealy.Rows[i].Cells[j].Value);
+                            temnporal = temp.Split(',');
+                            salidasCero[j] = int.Parse(temnporal[1]);
+                            estadosSalida[j] = temnporal[0];
+
+
+
+                            //importante el indice
+                        }
+
+                        Estadotemporal.Salidas = salidasCero;
+                        Estadotemporal.Estados = estadosSalida;
+
+                        estados[i] = Estadotemporal;
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+
+                    machineCount++;
+
+                }
+                a = new Maquina(estados, 1);
+                for (int i = 0; i < States.Length; i++)
+                {
+                    for (int j = 0; j < W.Length; j++)
+                    {
+                        dataGridViewMealy.Rows[i].Cells[j].Value = "";
+                    }
+
+                }
+
+
+
+                this.buttonmealycompleta.Enabled = false;
+
 
             }
 
