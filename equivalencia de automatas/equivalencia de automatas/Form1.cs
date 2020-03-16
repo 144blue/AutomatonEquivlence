@@ -271,6 +271,16 @@ namespace equivalencia_de_automatas
                 buttonmealycompleta.Enabled = false;
             }
 
+            /*Cración de la suma de Maquinas
+             * La maquina suma es la que contiene los estados y las salidas de a y b
+             * La maquina suma es la que debe hacer la partición final
+            */
+           
+            Maquina suma = a.SumaMaquinas(a, b);
+
+            //Resultado final de si las maquinas a y b son equivalentes
+            String resultado = suma.ResultadoEquivalencia(a, b);
+
 
         }
 

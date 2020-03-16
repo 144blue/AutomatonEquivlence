@@ -115,7 +115,7 @@ namespace equivalencia_de_automatas
             }
         }
 
-        public void SumaMaquinas(Maquina A, Maquina B)
+        public Maquina SumaMaquinas(Maquina A, Maquina B)
         {
             IEnumerable<Estado> Todos = A.Lista.Union(B.Lista);
 
@@ -126,21 +126,38 @@ namespace equivalencia_de_automatas
             }
             int SumaType = A.type;
 
-            Maquina suma = new Maquina(null, A.type);
-
+            Maquina suma = new Maquina(sumaEstados, A.type);
+            return suma;
 
         }
         public String ResultadoEquivalencia(Maquina A, Maquina B)
         {
+            var p2 = Lista.GroupBy(m => m.NombreGrupo);
             String resultado = "";
             bool result = false;
-            var estadosA = A.Lista;
-            var estadosB = B.Lista;
 
-            var Q0 = Lista.First();
+            var Q0 = p2.First();
+            var Qa = A.Lista.First().estado;
+            var Qb = B.Lista.First().estado;
+
+            // var res= Q0.Select(o => o.estado.Where(i => i.Equals(Qa) || i.Equals(Qb)));
+            var res = Q0.Where(e => e.estado.Equals(Qa) || e.estado.Equals(Qb));
 
 
+            if (res.Count() == 2)
+            {
+                result = true;
+            }
+            if (result)
+            {
+                resultado = "Son equivalentes";
+            }
+            else
+            {
+                resultado = "No son equivalentes";
+            }
             return resultado;
+
         }
 
     }
