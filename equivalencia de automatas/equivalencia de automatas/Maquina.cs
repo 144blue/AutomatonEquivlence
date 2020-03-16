@@ -118,9 +118,24 @@ namespace equivalencia_de_automatas
         public Maquina SumaMaquinas(Maquina A, Maquina B)
         {
             IEnumerable<Estado> Todos = A.Lista.Union(B.Lista);
+            var a1 = A.Lista;
+            var b2 = B.Lista;
+            var total = a1.Count() + b2.Count();
+            Estado[] sumaEstados = new Estado[total];
 
-            Estado[] sumaEstados = new Estado[Todos.Count()];
-            for(int i=0; i < sumaEstados.Count(); i++)
+            for (int i = 0; i < a1.Count(); i++)
+            {
+                sumaEstados[i] = a1[i];
+
+            }
+            for (int i = 0; i < b2.Count(); i++)
+            {
+                sumaEstados[i] = b2[i];
+
+            }
+
+
+            for (int i=0; i < sumaEstados.Count(); i++)
             {
                 sumaEstados[i] = Todos.ElementAt(i);
             }

@@ -16,3 +16,13 @@ C:\Users\janus\AutomatonEquivlence\equivalencia de automatas\equivalencia de aut
 C:\Users\janus\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe.config
 C:\Users\janus\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe
 C:\Users\janus\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.pdb
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe.config
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.exe
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\bin\Debug\equivalencia de automatas.pdb
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.csprojAssemblyReference.cache
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia_de_automatas.Form1.resources
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia_de_automatas.Properties.Resources.resources
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.csproj.GenerateResource.cache
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.exe
+C:\Users\Laura\Desktop\Universidad\2020-1\Info-Teorica\Tarea 1\AutomatonEquivlence\equivalencia de automatas\equivalencia de automatas\obj\Debug\equivalencia de automatas.pdb

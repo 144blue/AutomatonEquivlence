@@ -26,8 +26,10 @@ namespace equivalencia_de_automatas
 
         public bool CompararSalidas(int[] SalidasB)
         {
-            for (int i = 0; i < SalidasB.Length; i++)
+            
+            for (int i = 0; i < Salidas.Length; i++)
             {
+
                 if (!Salidas[i].Equals(SalidasB[i]))
                 {
                     return false;
