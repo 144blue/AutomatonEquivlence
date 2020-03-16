@@ -115,8 +115,6 @@ namespace equivalencia_de_automatas
 
         private void button2_Click(object sender, EventArgs e)
         {
-           //mealy probar equivalencia
-         
             
         }
 
@@ -183,7 +181,7 @@ namespace equivalencia_de_automatas
                    // }
 
 
-                    machineCount++;
+                   
                     
                 }
                 a = new Maquina(estados,1);
@@ -196,6 +194,8 @@ namespace equivalencia_de_automatas
                     }
 
                 }
+
+                machineCount=1;
 
             }
             else if (machineCount == 1)
@@ -271,17 +271,7 @@ namespace equivalencia_de_automatas
                 buttonmealycompleta.Enabled = false;
             }
 
-            /*Cración de la suma de Maquinas
-             * La maquina suma es la que contiene los estados y las salidas de a y b
-             * La maquina suma es la que debe hacer la partición final
-            */
            
-            Maquina suma = a.SumaMaquinas(a, b);
-
-            //Resultado final de si las maquinas a y b son equivalentes
-            var machine= suma.ParticionP0();
-            suma.AsignarParticion(machine);
-            String resultado = suma.ResultadoEquivalencia(a, b);
 
 
         }
@@ -303,6 +293,24 @@ namespace equivalencia_de_automatas
         private void button3_Click(object sender, EventArgs e)
         {
             //moore probar equivalencia
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //mealy probar equivalencia
+            /*Cración de la suma de Maquinas
+            * La maquina suma es la que contiene los estados y las salidas de a y b
+            * La maquina suma es la que debe hacer la partición final
+           */
+
+            Maquina suma = a.SumaMaquinas(a, b);
+
+            //Resultado final de si las maquinas a y b son equivalentes
+            var machine = suma.ParticionP0();
+            suma.AsignarParticion(machine);
+            String resultado = suma.ResultadoEquivalencia(a, b);
+            Console.WriteLine(resultado);
+
         }
     }
 }
